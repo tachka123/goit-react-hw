@@ -1,0 +1,25 @@
+.transactionHistory {
+  margin: 50px auto 0;
+  width: 100%;
+  text-align: center;
+}
+
+.transactionHistory thead tr {
+  background-color: #2279bc;
+}
+
+.transactionHistory thead tr th {
+  height: 40px;
+}
+
+.transactionHistory tbody tr td {
+  height: 33px;
+}
+
+.count {
+  background-color: grey;
+}
+
+.uncount {
+  background-color: wheat;
+}
