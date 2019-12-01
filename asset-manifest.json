@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/goit-react-hw/goit-react-hw-01/static/css/main.43226431.chunk.css",
-    "main.js": "/goit-react-hw/goit-react-hw-01/static/js/main.de00241e.chunk.js",
-    "main.js.map": "/goit-react-hw/goit-react-hw-01/static/js/main.de00241e.chunk.js.map",
-    "runtime-main.js": "/goit-react-hw/goit-react-hw-01/static/js/runtime-main.0772192d.js",
-    "runtime-main.js.map": "/goit-react-hw/goit-react-hw-01/static/js/runtime-main.0772192d.js.map",
-    "static/js/2.9c2e5ae0.chunk.js": "/goit-react-hw/goit-react-hw-01/static/js/2.9c2e5ae0.chunk.js",
-    "static/js/2.9c2e5ae0.chunk.js.map": "/goit-react-hw/goit-react-hw-01/static/js/2.9c2e5ae0.chunk.js.map",
-    "index.html": "/goit-react-hw/goit-react-hw-01/index.html",
-    "precache-manifest.eab2d01aaac017df71c185d106c953ca.js": "/goit-react-hw/goit-react-hw-01/precache-manifest.eab2d01aaac017df71c185d106c953ca.js",
-    "service-worker.js": "/goit-react-hw/goit-react-hw-01/service-worker.js",
-    "static/css/main.43226431.chunk.css.map": "/goit-react-hw/goit-react-hw-01/static/css/main.43226431.chunk.css.map"
+    "main.css": "/goit-react-hw/static/css/main.43226431.chunk.css",
+    "main.js": "/goit-react-hw/static/js/main.de00241e.chunk.js",
+    "main.js.map": "/goit-react-hw/static/js/main.de00241e.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw/static/js/runtime-main.2afb65dd.js",
+    "runtime-main.js.map": "/goit-react-hw/static/js/runtime-main.2afb65dd.js.map",
+    "static/js/2.9c2e5ae0.chunk.js": "/goit-react-hw/static/js/2.9c2e5ae0.chunk.js",
+    "static/js/2.9c2e5ae0.chunk.js.map": "/goit-react-hw/static/js/2.9c2e5ae0.chunk.js.map",
+    "index.html": "/goit-react-hw/index.html",
+    "precache-manifest.b2ca71d4c5f19503e205d9c43ad7870b.js": "/goit-react-hw/precache-manifest.b2ca71d4c5f19503e205d9c43ad7870b.js",
+    "service-worker.js": "/goit-react-hw/service-worker.js",
+    "static/css/main.43226431.chunk.css.map": "/goit-react-hw/static/css/main.43226431.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0772192d.js",
+    "static/js/runtime-main.2afb65dd.js",
     "static/js/2.9c2e5ae0.chunk.js",
     "static/css/main.43226431.chunk.css",
     "static/js/main.de00241e.chunk.js"
