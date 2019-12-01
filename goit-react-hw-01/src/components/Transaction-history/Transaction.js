@@ -1,10 +1,9 @@
 import React from 'react';
-import style from './trans.module.css';
 import PropType from 'prop-types';
+import style from './trans.module.css';
 
 function Transaction({ data }) {
   let choiceCountOrUncount = 0;
-
   return (
     <table className={style.transactionHistory}>
       <thead>
@@ -14,10 +13,9 @@ function Transaction({ data }) {
           <th>Currency</th>
         </tr>
       </thead>
-
       <tbody>
         {data.map(({ id, type, amount, currency }) => {
-          choiceCountOrUncount++;
+          ++choiceCountOrUncount;
           return (
             <tr
               key={id}
@@ -41,6 +39,7 @@ Transaction.propType = {
   type: PropType.string,
   amount: PropType.string,
   currency: PropType.string,
+  data: PropType.array,
 };
 
 export default Transaction;
