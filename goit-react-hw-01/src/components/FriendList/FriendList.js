@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './friends.module.css';
-import Proptypes from 'prop-types';
 
 function FriendList({ friendList }) {
   return (
@@ -9,10 +9,10 @@ function FriendList({ friendList }) {
         return (
           <li key={id}>
             <span
-              className={
-                style.status + ' ' + (isOnline ? style.online : style.offline)
-              }
-            ></span>
+              className={`${style.status} ${
+                isOnline ? style.online : style.offline
+              }`}
+            />
             <img className={style.avatar} src={avatar} alt="" />
             <p className={style.name}>{name}</p>
           </li>
@@ -23,10 +23,11 @@ function FriendList({ friendList }) {
 }
 
 FriendList.propTypes = {
-  avatar: Proptypes.string,
-  name: Proptypes.string,
-  isOnline: Proptypes.bool,
-  id: Proptypes.number,
+  friendList: PropTypes.array,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.number,
 };
 
 export default FriendList;

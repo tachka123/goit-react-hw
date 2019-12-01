@@ -5,7 +5,7 @@ import style from './static.module.css';
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return { backgroundColor: color };
@@ -16,10 +16,10 @@ function Statistics({ title, stats }) {
     <section className={style.statistics}>
       {title && <h2 className={style.title}>{title}</h2>}
       <ul className={style.statList}>
-        {stats.map(item => (
-          <li key={item.id} style={getRandomColor()} className={style.item}>
-            <span className={style.label}>{item.label}</span>
-            <span className={style.percentage}>{item.percentage}</span>
+        {stats.map(({ id, percentage, label }) => (
+          <li key={id} style={getRandomColor()} className={style.item}>
+            <span className={style.label}>{label}</span>
+            <span className={style.percentage}>{percentage}</span>
           </li>
         ))}
       </ul>
@@ -32,6 +32,10 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
   title: Proptypes.string,
+  stats: Proptypes.array,
+  id: Proptypes.string,
+  label: Proptypes.string,
+  percentage: Proptypes.string,
 };
 
 export default Statistics;

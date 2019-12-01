@@ -15,7 +15,7 @@ function Transaction({ data }) {
       </thead>
       <tbody>
         {data.map(({ id, type, amount, currency }) => {
-          ++choiceCountOrUncount;
+          choiceCountOrUncount += 1;
           return (
             <tr
               key={id}
@@ -35,11 +35,11 @@ function Transaction({ data }) {
 }
 
 Transaction.propType = {
+  data: PropType.arrayOf(PropType.object),
   id: PropType.string,
   type: PropType.string,
   amount: PropType.string,
   currency: PropType.string,
-  data: PropType.array,
 };
 
 export default Transaction;
