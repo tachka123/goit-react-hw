@@ -2,33 +2,45 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './profile.module.css';
 
-function Profile({ user }) {
+function Profile({
+  user: {
+    name,
+    avatar,
+    tag,
+    location,
+    stats: { followers, views, likes },
+  },
+}) {
   return (
     <div className={style.profile}>
       <div>
-        <img src={user.avatar} alt="user avatar" className={style.avatar} />
-        <h2>{user.name}</h2>
-        <p className={style.tag}>@{user.tag}</p>
-        <p className={style.location}>{user.location}</p>
+        <img src={avatar} alt="user avatar" className={style.avatar} />
+        <h2>{name}</h2>
+        <p className={style.tag}>@{tag}</p>
+        <p className={style.location}>{location}</p>
       </div>
 
       <ul className={style.stats}>
         <li>
           <span>Followers:</span>
-          <span className={style.quantity}>{user.stats.followers}</span>
+          <span className={style.quantity}>{followers}</span>
         </li>
         <li>
           <span>Views:</span>
-          <span className={style.quantity}>{user.stats.views}</span>
+          <span className={style.quantity}>{views}</span>
         </li>
         <li>
           <span>Likes:</span>
-          <span className={style.quantity}>{user.stats.likes}</span>
+          <span className={style.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
   );
 }
+
+Profile.defaultProps = {
+  user: {},
+};
 
 Profile.propTypes = {
   user: PropTypes.shape({

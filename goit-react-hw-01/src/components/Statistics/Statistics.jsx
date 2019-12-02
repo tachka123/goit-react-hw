@@ -28,14 +28,18 @@ function Statistics({ title, stats }) {
 }
 Statistics.defaultProps = {
   title: '',
+  stats: [],
 };
 
 Statistics.propTypes = {
   title: Proptypes.string,
-  stats: Proptypes.array,
-  id: Proptypes.string,
-  label: Proptypes.string,
-  percentage: Proptypes.string,
+  stats: Proptypes.arrayOf(
+    Proptypes.shape({
+      id: Proptypes.string,
+      label: Proptypes.string,
+      percentage: Proptypes.number,
+    }),
+  ),
 };
 
 export default Statistics;

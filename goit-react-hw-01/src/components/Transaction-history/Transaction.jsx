@@ -34,12 +34,20 @@ function Transaction({ data }) {
   );
 }
 
-Transaction.propType = {
-  data: PropType.arrayOf(PropType.object),
-  id: PropType.string,
-  type: PropType.string,
-  amount: PropType.string,
-  currency: PropType.string,
+Transaction.defaultProps = {
+  data: [],
+};
+
+Transaction.PropType = {
+  data: PropType.arrayOf(
+    PropType.shape({
+      id: PropType.string,
+      type: PropType.string,
+      amount: PropType.string,
+      currency: PropType.string,
+      map: PropType.func,
+    }),
+  ),
 };
 
 export default Transaction;

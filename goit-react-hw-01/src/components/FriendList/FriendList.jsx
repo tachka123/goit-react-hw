@@ -22,12 +22,19 @@ function FriendList({ friendList }) {
   );
 }
 
+FriendList.defaultProps = {
+  friendList: [],
+};
+
 FriendList.propTypes = {
-  friendList: PropTypes.array,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
-  id: PropTypes.number,
+  friendList: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+      isOnline: PropTypes.bool,
+      id: PropTypes.number,
+    }),
+  ),
 };
 
 export default FriendList;
