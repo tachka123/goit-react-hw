@@ -13,7 +13,7 @@ function FriendList({ friendList }) {
                 isOnline ? style.online : style.offline
               }`}
             />
-            <img className={style.avatar} src={avatar} alt="" />
+            <img className={style.avatar} src={avatar} alt="avatar" />
             <p className={style.name}>{name}</p>
           </li>
         );
