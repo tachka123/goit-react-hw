@@ -1,23 +1,15 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import style from './static.module.css';
+import getRandomColorStyle from './getRandomColorStyle';
 
-function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i += 1) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return { backgroundColor: color };
-}
-
-function Statistics({ title, stats }) {
+const Statistics = ({ title, stats }) => {
   return (
     <section className={style.statistics}>
       {title && <h2 className={style.title}>{title}</h2>}
       <ul className={style.statList}>
         {stats.map(({ id, percentage, label }) => (
-          <li key={id} style={getRandomColor()} className={style.item}>
+          <li key={id} style={getRandomColorStyle()} className={style.item}>
             <span className={style.label}>{label}</span>
             <span className={style.percentage}>{percentage}</span>
           </li>

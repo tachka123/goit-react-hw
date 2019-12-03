@@ -2,8 +2,7 @@ import React from 'react';
 import PropType from 'prop-types';
 import style from './trans.module.css';
 
-function Transaction({ data }) {
-  let choiceCountOrUncount = 0;
+const Transaction = ({ data }) => {
   return (
     <table className={style.transactionHistory}>
       <thead>
@@ -14,14 +13,11 @@ function Transaction({ data }) {
         </tr>
       </thead>
       <tbody>
-        {data.map(({ id, type, amount, currency }) => {
-          choiceCountOrUncount += 1;
+        {data.map(({ id, type, amount, currency }, index) => {
           return (
             <tr
               key={id}
-              className={
-                choiceCountOrUncount % 2 === 0 ? style.count : style.uncount
-              }
+              className={(index + 1) % 2 === 0 ? style.count : style.uncount}
             >
               <td>{type}</td>
               <td>{amount}</td>
@@ -32,7 +28,7 @@ function Transaction({ data }) {
       </tbody>
     </table>
   );
-}
+};
 
 Transaction.defaultProps = {
   data: [],

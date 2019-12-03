@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './profile.module.css';
 
-function Profile({
+const Profile = ({
   user: {
     name,
     avatar,
@@ -10,7 +10,7 @@ function Profile({
     location,
     stats: { followers, views, likes },
   },
-}) {
+}) => {
   return (
     <div className={style.profile}>
       <div>
