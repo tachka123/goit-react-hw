@@ -8,3 +8,7 @@
   width: 700px;
   margin: 100px auto 0;
 }
+
+.container div {
+  padding: 20px 0;
+}
