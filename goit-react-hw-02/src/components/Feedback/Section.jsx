@@ -22,37 +22,12 @@ class Section extends Component {
     feedback: 0,
   };
 
-  addGoodFeedback = () => {
+  addComment = e => {
+    const { name } = e.target;
     this.setState(prev => {
       return {
-        good: prev.good + 1,
-      };
-    });
-    this.countTotalFeedback();
-  };
-
-  addNeutralFeedback = () => {
-    this.setState(prev => {
-      return {
-        neutral: prev.neutral + 1,
-      };
-    });
-    this.countTotalFeedback();
-  };
-
-  addBadFeedback = () => {
-    this.setState(prev => {
-      return {
-        bad: prev.bad + 1,
-      };
-    });
-    this.countTotalFeedback();
-  };
-
-  countTotalFeedback = () => {
-    this.setState(({ good, bad, neutral }) => {
-      return {
-        total: good + bad + neutral,
+        [name]: prev[name] + 1,
+        total: prev.total + 1,
       };
     });
     this.countPositiveFeedbackPercentage();
@@ -72,12 +47,21 @@ class Section extends Component {
     return (
       <div className={style.container}>
         <h2>{title}</h2>
-        <FeedBackOptions onLeaveFeedback={this.addGoodFeedback} option="GOOD" />
         <FeedBackOptions
-          onLeaveFeedback={this.addNeutralFeedback}
-          option="NEUTRAL"
+          onLeaveFeedback={this.addComment}
+          name="good"
+          option="GOOD"
         />
-        <FeedBackOptions onLeaveFeedback={this.addBadFeedback} option="BAD" />
+        <FeedBackOptions
+          onLeaveFeedback={this.addComment}
+          option="NEUTRAL"
+          name="neutral"
+        />
+        <FeedBackOptions
+          onLeaveFeedback={this.addComment}
+          name="bad"
+          option="BAD"
+        />
         <h2>Statisctics</h2>
         {good === 0 && neutral === 0 && bad === 0 ? (
           'No feedback given'
