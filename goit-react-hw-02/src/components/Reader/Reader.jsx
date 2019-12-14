@@ -25,7 +25,7 @@ class Reader extends Component {
     });
   };
 
-  render() {
+  render () {
     const massiveLength = data.length;
     const { publicationIndex } = this.state;
     return (
@@ -34,7 +34,7 @@ class Reader extends Component {
           onClickNext={this.onClickNext}
           onClickPrev={this.onClickPrev}
           prevBtnDisabled={publicationIndex === 0}
-          nextBtnDisabled={publicationIndex + 1 === data.length}
+          nextBtnDisabled={publicationIndex + 1 === massiveLength}
         />
         <Progress
           massiveLength={massiveLength}
