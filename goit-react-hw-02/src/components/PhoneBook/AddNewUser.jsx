@@ -15,7 +15,7 @@ const SectionAddNew = ({ inputName, inputNum, handleOnChange, addUser }) => {
           value={inputName}
           name="name"
           onChange={handleOnChange}
-          type="text"
+          type="number"
         />
       </label>
       <label htmlFor={numberId}>
